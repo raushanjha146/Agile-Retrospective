@@ -11,7 +11,7 @@ let sessionStore: {
 
 const MAX_VOTES_USER_VOTE_PER_BOARD = 10;
 const NEW_BOARD = {
-  title: "...",
+  title: "Sprint-Retrospective...",
   showResults: false,
   //maxStars: MAX_VOTES_USER_VOTE_PER_BOARD,
   columns: [
@@ -27,7 +27,12 @@ const NEW_BOARD = {
     },
     {
       id: uuid.v4(),
-      name: "⚡️ New Idea",
+      name: "😞 Not So Good",
+      cards: []
+    },
+    {
+      id: uuid.v4(),
+      name: "👍 Applaud",
       cards: []
     }
   ]
