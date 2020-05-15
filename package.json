@@ -5,15 +5,21 @@
   "main": "index.js",
   "homepage": "https://github.com/raushanjha146/Agile-Retrospective",
   "contributors": [
-    "Joe Krump <krump.joseph@gmail.com>",
-    "John Brennan"
+    "Raushan Kumar <raushanjha146@gmail.com>",
+    "Raushan Kumar"
   ],
+  "engines": {
+    "node": "v13.12.0",
+    "npm": "6.14.4"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/raushanjha146/Agile-Retrospective"
   },
   "license": "MIT",
   "dependencies": {
+    "@angular/cli": "^9.1.6",
+    "@angular/compiler-cli": "^9.1.7",
     "express": "^4.17.1",
     "ngrok": "^3.2.5",
     "open": "7.0.2",
@@ -25,6 +31,7 @@
     "socket.io": "^2.3.0",
     "socket.io-client": "^2.3.0",
     "url-loader": "3.0.0",
+    "typescript": "^3.6.4",
     "uuid": "^3.3.3"
   },
   "scripts": {
@@ -32,9 +39,12 @@
     "prod": "NODE_ENV=production concurrently --kill-others \"npm run watch\" \"ts-node-dev --respawn --transpileOnly server.ts\" \"ts-node-dev --transpileOnly ngrok.ts\"",
     "dev:client": "webpack-dev-server --mode development --open",
     "dev:server": "ts-node-dev --respawn --transpileOnly server.ts",
+    "postinstall": "ng build --output-path public  --aot --prod",
     "watch": "webpack --watch"
   },
   "devDependencies": {
+    "@angular/cli": "^9.1.6",
+    "@angular/compiler-cli": "^9.1.7",
     "@types/express": "^4.17.2",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.3",

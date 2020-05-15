@@ -41,7 +41,7 @@ const NEW_BOARD = {
 let app = express();
 let server = require("http").Server(app);
 let io = SocketIO(server);
-server.listen(8000);
+server.listen(process.env.PORT || 8000);
 app.use(express.static('public'));
 
 app.get("/board/:boardId", function(_req, res) {
