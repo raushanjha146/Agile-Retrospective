@@ -41,7 +41,10 @@ const NEW_BOARD = {
 let app = express();
 let server = require("http").Server(app);
 let io = SocketIO(server);
-server.listen(process.env.PORT || 8000);
+var port = process.env.PORT || 8000
+app.listen(port)
+console.log('server started at port - ' + port)
+//server.listen(process.env.PORT || 8000);
 app.use(express.static('public'));
 
 app.get("/board/:boardId", function(_req, res) {
