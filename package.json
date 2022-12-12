@@ -22,7 +22,7 @@
     "@angular/compiler-cli": "^9.1.7",
     "@types/node": "^14.0.1",
     "expres": "0.0.5",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "ngrok": "^3.2.5",
     "nodemon": "^2.0.4",
     "open": "7.0.2",
